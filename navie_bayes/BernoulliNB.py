@@ -18,7 +18,7 @@ class BernoulliNB(BaseNB):
             self.piror = dict(self.class_prior)
         else:
             self.prior = dict([(label, 1.0 / self.number_label) for label, _ in number_per_label])
-        return self.piror
+        return self.prior
 
     def train(self, train_feature, train_label):
         self._bayes_train_feature = np.array(train_feature)

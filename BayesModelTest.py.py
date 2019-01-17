@@ -43,8 +43,12 @@ if __name__ == '__main__':
     # navieBayes.train(train_feature, train_label)
     # print(navieBayes.score(test_feature, test_label))
 
-    train_feature, train_label, test_feature, test_label = get_feature_tf_idf()
-    navieBayes = GaussianNB()
+    # train_feature, train_label, test_feature, test_label = get_feature_tf_idf()
+    # navieBayes = GaussianNB()
+    # navieBayes.train(train_feature, train_label)
+    # print(navieBayes.score(test_feature, test_label))
+    train_feature, train_label, test_feature, test_label = get_feature_bow()
+    navieBayes = BernoulliNB()
     navieBayes.train(train_feature, train_label)
     print(navieBayes.score(test_feature, test_label))
 
